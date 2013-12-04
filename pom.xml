@@ -57,11 +57,4 @@
     </plugins>
   </build>
 
-<!--
-  <scm>
-    <connection>scm:git:https://github.com/michaelsembwever/cassandra-hadoop.git</connection>
-    <url>https://github.com/michaelsembwever/cassandra-hadoop</url>
-    <tag>HEAD</tag>
-  </scm>
--->
 </project>
