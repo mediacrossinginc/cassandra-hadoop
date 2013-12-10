@@ -45,7 +45,15 @@ public class ColumnFamilySplit extends InputSplit implements Writable, org.apach
         this.startToken = startToken;
         this.endToken = endToken;
         this.length = length;
+        for (int i = 0; i < dataNodes.length; i++) {
+		final String node = dataNodes[i];
+        	dataNodes[i] = removeTrailingPeriod(node); 
+        }
         this.dataNodes = dataNodes;
+    }
+
+    private String removeTrailingPeriod(String node) {
+	return node.endsWith(".") ? node.substring(0, node.length() - 1) : node; 
     }
 
     public String getStartToken()
